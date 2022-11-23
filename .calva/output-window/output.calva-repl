@@ -1,0 +1,22 @@
+clj꞉cljs-blog.core꞉> 
+(def socket (phoenix/Socket. "/socket", {}))
+#'cljs-blog.core/socket
+clj꞉cljs-blog.core꞉> 
+socket
+#object[Socket [object Object]]
+clj꞉cljs-blog.core꞉> 
+(.connect socket)
+nil
+clj꞉cljs-blog.core꞉> 
+socket
+nil
+clj꞉cljs-blog.core꞉> 
+(def socket (phoenix/Socket. "/socket", {}))
+#'cljs-blog.core/socket
+clj꞉cljs-blog.core꞉> 
+socket
+#object[Socket [object Object]]
+clj꞉cljs-blog.core꞉> 
+(.connect socket)
+nil
+clj꞉cljs-blog.core꞉> 

@@ -5,6 +5,7 @@
    [cljs-blog.events :as events]
    [cljs-blog.views :as views]
    [cljs-blog.config :as config]
+   ["phoenix" :as phoenix]
    ))
 
 
