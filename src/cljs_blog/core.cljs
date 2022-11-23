@@ -9,6 +9,12 @@
    ))
 
 
+(comment
+  (def socket (phoenix/Socket. "ws://localhost:4000/socket", {}))
+  (.connect socket)
+  ;; end
+  )
+
 (defn dev-setup []
   (when config/debug?
     (println "dev mode")))
