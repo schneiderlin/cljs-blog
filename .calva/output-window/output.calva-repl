@@ -57,3 +57,109 @@ clj꞉cljs-blog.core꞉> 
 clj꞉cljs-blog.core꞉> 
 nil
 clj꞉cljs-blog.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:24
+;  Use of undeclared Var cljs-blog.core/socket
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.core꞉> 
+socket
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Use of undeclared Var cljs-blog.core/socket
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.core꞉> 
+socket
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Use of undeclared Var cljs-blog.core/socket
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/socket
+clj꞉cljs-blog.core꞉> 
+nil
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/channel
+clj꞉cljs-blog.core꞉> 
+channel
+#object[Channel [object Object]]
+clj꞉cljs-blog.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:6
+;  Use of undeclared Var cljs-blog.core/channel
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.core꞉> socket
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Use of undeclared Var cljs-blog.core/socket
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/socket
+clj꞉cljs-blog.core꞉> 
+nil
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/channel
+clj꞉cljs-blog.core꞉> 
+3
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:24
+;  Use of undeclared Var cljs-blog.core/socket
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/socket
+clj꞉cljs-blog.core꞉> 
+nil
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/channel
+clj꞉cljs-blog.core꞉> 
+3
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> channel
+#object[Channel [object Object]]
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/channel
+clj꞉cljs-blog.core꞉> 
+3
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> channel
+#object[Channel [object Object]]
+clj꞉cljs-blog.core꞉> 
+channel
+nil
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/socket
+clj꞉cljs-blog.core꞉> 
+nil
+clj꞉cljs-blog.core꞉> 
+#'cljs-blog.core/channel
+clj꞉cljs-blog.core꞉> 
+3
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> 
+#object[Push [object Object]]
+clj꞉cljs-blog.core꞉> 

@@ -10,8 +10,17 @@
 
 
 (comment
+  ;; connect socket
   (def socket (phoenix/Socket. "ws://localhost:4000/socket", {}))
   (.connect socket)
+  
+  ;; let channel = socket.channel("room:123", {token: roomToken})
+  (def channel (.channel socket "room:lobby" {}))
+  ;; channel.on ("new_msg", msg => console.log ("Got message", msg))
+  (.on channel "new_msg" (fn [msg] (.log js/console "Got message" msg)))
+  (.join channel)
+  ;; channel.push("new_msg", {body: e.target.val}, 10000)
+  (.push channel "new_msg" {:body "body"} 10000)
   ;; end
   )
 
