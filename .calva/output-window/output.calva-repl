@@ -24,142 +24,289 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 ;    *Calva: Toggle REPL connection*
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
-cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
+cljs꞉cljs.user꞉>  ; Us1
+
+e `alt+enter` to evaluate
 nil
 ; No available JS runtime.
 ; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
-clj꞉cljs.user꞉> 
+cljs꞉cljs.user꞉> 
+1
 nil
 ; No available JS runtime.
 ; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
-clj꞉cljs.user꞉> 
+cljs꞉cljs.user꞉> 
+1
+1
+cljs꞉cljs.user꞉> 
 nil
-clj꞉cljs-blog.core꞉> 
-(def socket (phoenix/Socket. "/socket", {}))
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
-(.connect socket)nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:11
-;  Use of undeclared Var cljs-blog.core/socket
-; --------------------------------------------------------------------------------
+; ------ REPL Error while processing ---------------------------------------------
+; (ns cljs-blog.core
+;   (:require
+;    [reagent.dom :as rdom]
+;    [re-frame.core :as re-frame]
+;    [cljs-blog.events :as events]
+;    [cljs-blog.views :as views]
+;    [cljs-blog.config :as config]
+;    [cheshire.core :as json]
+;    [com.wsscode.pathom3.connect.operation :as pco]
+;    ["phoenix" :as phoenix]))
+; The required namespace "cheshire.core" is not available, it was required by "cljs_blog/core.cljs".
+; "cheshire/core.clj" was found on the classpath. Maybe this library only supports CLJ?
+cljs꞉cljs.user꞉> 
+nil
+; [line 3, col 16] Invalid keyword: ::pco/output.
 ; 
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
+cljs꞉cljs.user꞉> 
 nil
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
+; ------ REPL Error while processing ---------------------------------------------
+; (ns cljs-blog.core
+;   (:require
+;    [reagent.dom :as rdom]
+;    [re-frame.core :as re-frame]
+;    [cljs-blog.events :as events]
+;    [cljs-blog.views :as views]
+;    [cljs-blog.config :as config]
+;    [cheshire.core :as json]
+;    [com.wsscode.pathom3.connect.operation :as pco]
+;    ["phoenix" :as phoenix]))
+; The required namespace "cheshire.core" is not available, it was required by "cljs_blog/core.cljs".
+; "cheshire/core.clj" was found on the classpath. Maybe this library only supports CLJ?
+cljs꞉cljs.user꞉> 
 nil
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
-nil
-clj꞉cljs-blog.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:24
-;  Use of undeclared Var cljs-blog.core/socket
-; --------------------------------------------------------------------------------
-; 
-clj꞉cljs-blog.core꞉> 
-socket
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:1
-;  Use of undeclared Var cljs-blog.core/socket
-; --------------------------------------------------------------------------------
-; 
-clj꞉cljs-blog.core꞉> 
-socket
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:1
-;  Use of undeclared Var cljs-blog.core/socket
-; --------------------------------------------------------------------------------
-; 
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
-nil
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/channel
-clj꞉cljs-blog.core꞉> 
-channel
-#object[Channel [object Object]]
-clj꞉cljs-blog.core꞉> 
+cljs꞉cljs-blog.core꞉> 
 nil
 ; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:6
-;  Use of undeclared Var cljs-blog.core/channel
+;  Resource: <eval>:1:2
+;  Use of undeclared Var cljs-blog.core/slurp
 ; --------------------------------------------------------------------------------
 ; 
-clj꞉cljs-blog.core꞉> socket
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:47
+;  Use of undeclared Var cljs-blog.core/ip
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.core꞉> 
 nil
 ; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:1
-;  Use of undeclared Var cljs-blog.core/socket
+;  Resource: <eval>:1:2
+;  Use of undeclared Var cljs-blog.core/slurp
 ; --------------------------------------------------------------------------------
 ; 
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
-nil
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/channel
-clj꞉cljs-blog.core꞉> 
-3
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> 
+cljs꞉cljs-blog.core꞉> 
+(slurp "123")
 nil
 ; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:24
-;  Use of undeclared Var cljs-blog.core/socket
+;  Resource: <eval>:1:2
+;  Use of undeclared Var cljs-blog.core/slurp
 ; --------------------------------------------------------------------------------
 ; 
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
+cljs꞉cljs-blog.core꞉> 
+"https://get.geojs.io/v1/ip/geo/223.74.73.225.json"
+cljs꞉cljs-blog.core꞉> 
 nil
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/channel
-clj꞉cljs-blog.core꞉> 
-3
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> channel
-#object[Channel [object Object]]
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/channel
-clj꞉cljs-blog.core꞉> 
-3
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> channel
-#object[Channel [object Object]]
-clj꞉cljs-blog.core꞉> 
-channel
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:2:6
+;  Use of undeclared Var cljs.core/slurp
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.core꞉> 
 nil
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/socket
-clj꞉cljs-blog.core꞉> 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:2:6
+;  Use of undeclared Var cljs.core/slurp
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/ip->lat-long
+cljs꞉cljs-blog.core꞉> 
+(ip->lat-long {:ip 123})
+{:longitude "-88.0569", :latitude "41.5119"}
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/woeid->temperature
+cljs꞉cljs-blog.core꞉> 
+(woeid->temperature {:woeid 1})
+{:temperature 4.529999999999999}
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/latlong->woeid
+cljs꞉cljs-blog.core꞉> (latlong->woeid {:latitude 1 :longitude 2})
+{:woeid 2379574}
+cljs꞉cljs-blog.core꞉> 
 nil
-clj꞉cljs-blog.core꞉> 
-#'cljs-blog.core/channel
-clj꞉cljs-blog.core꞉> 
-3
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> 
-#object[Push [object Object]]
-clj꞉cljs-blog.core꞉> 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:7
+;  Use of undeclared Var cljs-blog.core/woeid->temperature
+; --------------------------------------------------------------------------------
+; 
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:3:7
+;  Use of undeclared Var cljs-blog.core/latlong->woeid
+; --------------------------------------------------------------------------------
+; 
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:2:7
+;  Use of undeclared Var cljs-blog.core/ip->lat-long
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/ip->lat-long
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/latlong->woeid
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/woeid->temperature
+cljs꞉cljs-blog.core꞉> 
+{:temperature 4.529999999999999}
+cljs꞉cljs-blog.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:2:20
+;  Use of undeclared Var cljs-blog.core/ip->lat-long
+; --------------------------------------------------------------------------------
+; 
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:3:20
+;  Use of undeclared Var cljs-blog.core/latlong->woeid
+; --------------------------------------------------------------------------------
+; 
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:20
+;  Use of undeclared Var cljs-blog.core/woeid->temperature
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:22
+;  Use of undeclared Var cljs-blog.core/views
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/ip->lat-long
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/latlong->woeid
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/woeid->temperature
+cljs꞉cljs-blog.core꞉> 
+{:temperature 4.529999999999999}
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/env
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/package-id->order-id
+cljs꞉cljs-blog.pathom-demo꞉> 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/package-id->order-id
+cljs꞉cljs-blog.pathom-demo꞉> (package-id->order-id 1)
+{:order-id "oid"}
+cljs꞉cljs-blog.pathom-demo꞉> 
+; Evaluating file: pathom_demo.cljs
+; ------ REPL Error while processing ---------------------------------------------
+; (cljs.core/load-file "/Users/linzihao/Desktop/workspace/blog/cljs-blog/src/cljs_blog/pathom_demo.cljs")
+; [line 29, col 19] Invalid keyword: :.
+; 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+; Evaluating file: pathom_demo.cljs
+; ------ REPL Error while processing ---------------------------------------------
+; (cljs.core/load-file "/Users/linzihao/Desktop/workspace/blog/cljs-blog/src/cljs_blog/pathom_demo.cljs")
+; [line 31, col 19] Invalid keyword: :.
+; 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+; Evaluating file: pathom_demo.cljs
+[]
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/sm
+cljs꞉cljs-blog.pathom-demo꞉> 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/sm
+cljs꞉cljs-blog.pathom-demo꞉> 
+1
+cljs꞉cljs-blog.pathom-demo꞉> 
+"oid"
+cljs꞉cljs-blog.pathom-demo꞉> 
+"2022"
+cljs꞉cljs-blog.pathom-demo꞉> 
+"send"
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/package-id->package-details
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/env
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/package-id->package-details
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/env
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/sm
+cljs꞉cljs-blog.pathom-demo꞉> 
+[{:sku "sku1", :num 1, :price 10} {:sku "sku2", :num 2, :price 15}]
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/sku-code->sku
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/env
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/sm
+cljs꞉cljs-blog.pathom-demo꞉> 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/package-total-price
+cljs꞉cljs-blog.pathom-demo꞉> 
+#'cljs-blog.pathom-demo/sm
+cljs꞉cljs-blog.pathom-demo꞉> 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+[{:sku "sku1", :num 1, :price 10} {:sku "sku2", :num 2, :price 15}]
+cljs꞉cljs-blog.pathom-demo꞉> 
+; Evaluating file: pathom_demo.cljs
+[]
+cljs꞉cljs-blog.pathom-demo꞉> 
+25
+cljs꞉cljs-blog.pathom-demo꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:2
+;  No such namespace: p.eql, could not locate p/eql.cljs, p/eql.cljc, or JavaScript source providing "p.eql"
+; --------------------------------------------------------------------------------
+; 
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+;  Use of undeclared Var p.eql/process
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.pathom-demo꞉> 
+nil
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid"}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [{:sku-code "sku1", :num 1, :price 10} {:sku-code "sku2", :num 2, :price 15}]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [{} {}]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [{:price 10, :cost 10} {:price 15, :cost 10}]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [{:price 10, :cost 10} {:price 15, :cost 10}]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [{:sku-code "sku1", :num 1, :price 10} {:sku-code "sku2", :num 2, :price 15}]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [:num 1]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [:num 1]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid", :package-details [:num 1]}
+cljs꞉cljs-blog.pathom-demo꞉> 
+{:order-id "oid",
+ :package-details
+ [{:price 10, :cost 10, :sku-code "sku1", :num 1, :sku-id 1, :primary-image "image"}
+  {:price 15, :cost 10, :sku-code "sku2", :num 2, :sku-id 1, :primary-image "image"}]}
+cljs꞉cljs-blog.pathom-demo꞉> 
