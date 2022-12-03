@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Template</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script type="text/javascript">
+            console.log("iframe listening message")
+            window.onmessage = (evt) => {
+                if(evt.ports && evt.ports.length) {
+                    console.log("iframe received port2")
+                     window.port2 = evt.ports[0];
+                    console.log("iframe export port2 to window")
+                }
+            }
+        </script>
+        <script src="kraken.js"></script>
+        <script>
+            var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"kraken","experimentalVK":false,"fileSizes":{"kraken.pck":5870896,"kraken.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
+            engine.startGame();
+        </script>
+    </body>
+</html>

@@ -11,5 +11,33 @@
     </noscript>
     <div id="app"></div>
     <script src="js/compiled/app.js"></script>
+    <iframe id="kraken" src="./kraken/kraken.html" width="3000" height="3000"></iframe>
+    <script type="text/javascript">
+        const channel = new MessageChannel()
+        console.log("message channel created")
+        window.port2 = channel.port2
+
+        const frame = document.getElementById("kraken").contentWindow
+        frame.addEventListener("load", function () {
+            frame.postMessage( // this is like a physical meeting
+                "", // some useless message
+                "*", // show your id?
+                [channel.port2]
+            )
+            console.log("port2 send to iframe")
+        })
+
+        channel.port1.onmessage = e => {
+            console.log("port1 get message: ", e)
+            const payload = JSON.parse(e.data)
+            console.log("payload", payload)
+        }
+
+        // a global function, can be use inside cljs
+        // (js/port1Controller "message")
+        window.port1Controller = msg => {
+            channel.port1.postMessage(msg)
+        }
+    </script>
   </body>
 </html>
