@@ -1,13 +1,8 @@
 (ns cljs-blog.components.kraken-room
   (:require
-   [cljs-blog.components.pill-button :refer [pill-button]]))
-
-;; 两张并排放的 card, 左边海盗, 右边海怪
-;; 通过 highlight 表示三种状态 自己选择 | 没人选择 | 对手选择
-;; 底下加一个切换按钮, 当房间只有自己的时候, 随便换
-;; 当房间还有一个对手的时候, 弹窗提示等待对手同意
-
-;; 下面还要加开始游戏和退出房间按钮
+   [cljs-blog.events :as events]
+   [cljs-blog.components.pill-button :refer [pill-button]]
+   [re-frame.core :as rf]))
 
 (defn card [img description selected]
   [:div {:class (concat [:max-w-sm
@@ -40,4 +35,4 @@
     [card random-image-url "海怪" false]]
    [:div
     [pill-button "开始游戏"]
-    [pill-button "离开房间"]]])
+    [pill-button "离开房间" #(rf/dispatch [::events/leave-room])]]])

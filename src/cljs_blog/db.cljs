@@ -2,4 +2,6 @@
 
 (def default-db
   {:open-create-room true
-   :open-join-room false})
+   :open-join-room false
+   :room-name ""
+   :current-room nil})

@@ -11,3 +11,8 @@
   ::open-join-room
   (fn [db _query-vector]
     (:open-join-room db)))
+ 
+ (rf/reg-sub
+  ::current-room
+  (fn [db _]
+    (:current-room db)))

@@ -15,7 +15,13 @@
      [pill-button "创建房间" #(rf/dispatch [::events/craete-room-open])]
      [pill-button "加入房间"]
      (when open-create
-       [create-room-popup true #(rf/dispatch [::events/craete-room-close])])]))
+       [create-room-popup {:open true
+                           :on-close #(rf/dispatch [::events/craete-room-close])
+                           :on-confirm #(rf/dispatch [::events/craete-room %])}])]))
+
 
 (defn main-panel []
-  [lobby])
+  (let [current-room @(rf/subscribe [::subs/current-room])]
+    (if (nil? current-room)
+     [lobby]
+     [kraken-room])))

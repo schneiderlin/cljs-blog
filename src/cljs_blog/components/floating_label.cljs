@@ -16,7 +16,8 @@
                    "peer-focus:text-sm"]}
    text])
 
-(defn input [id type name] 
+(defn input [& {:keys [id type name
+                       on-change]}]
   [:input {:id id
            :type type
            :name name
@@ -25,14 +26,19 @@
                    :text-gray-900 :placeholder-transparent
                    "focus:outline-none"
                    "focus:border-rose-600"]
+           :on-change on-change
            :placeholder "not shown"}])
 
-(defn floating-label 
+(defn floating-label
   "id: id attribute of input tag
    type: password | text | number
    name: name attribute of input tag
    text: label text"
-  [id type name text]
+  [& {:keys [id type name text
+             on-change]}]
   [:div.mt-10.relative
-   [input id type name]
+   [input {:id id
+           :type type
+           :name name
+           :on-change on-change}]
    [label id text]])

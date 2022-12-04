@@ -6,7 +6,10 @@
 
 (defn content []
   [:div {:class [:p-4 :space-y-4]}
-   [floating-label "id" "text" "name" "房间名"]
+   [floating-label {:id "id"
+                    :type "text"
+                    :name "name"
+                    :text "房间名"}]
    [pill-button "加入房间"]])
 
 (defn join-room-popup []
