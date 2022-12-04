@@ -4,4 +4,5 @@
   {:open-create-room true
    :open-join-room false
    :room-name ""
-   :current-room nil})
+   :current-room nil
+   :select-role :kraken})

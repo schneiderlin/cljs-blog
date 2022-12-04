@@ -33,3 +33,9 @@
  ::create-room-input
  (fn [db [_ value]]
    (assoc db :room-name value)))
+
+(re-frame/reg-event-db
+ ::select-role
+ (fn [db [_ role]]
+   (js/console.log role)
+   (assoc db :select-role role)))

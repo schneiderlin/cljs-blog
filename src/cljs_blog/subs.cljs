@@ -1,6 +1,7 @@
 (ns cljs-blog.subs
   (:require
-   [re-frame.core :as rf]))
+   [re-frame.core :as rf]
+   [cljs-blog.db :as db]))
 
  (rf/reg-sub
   ::open-create-room
@@ -16,3 +17,8 @@
   ::current-room
   (fn [db _]
     (:current-room db)))
+ 
+ (rf/reg-sub
+  ::select-role
+  (fn [db _] 
+    (:select-role db)))
