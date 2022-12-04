@@ -18,6 +18,7 @@
         console.log("message channel created")
         window.port2 = channel.port2
 
+        const frameElem = document.getElementById("kraken")
         const frame = document.getElementById("kraken").contentWindow
         frame.addEventListener("load", function () {
             frame.postMessage( // this is like a physical meeting
@@ -32,6 +33,14 @@
             console.log("port1 get message: ", e)
             const payload = JSON.parse(e.data)
             console.log("payload", payload)
+        }
+
+        window.iframeController = (show) => {
+            if (show) {
+              frameElem.style.display = "block"
+            } else {
+              frameElem.style.display = "none"; //hides the frame
+            }
         }
 
         // a global function, can be use inside cljs
