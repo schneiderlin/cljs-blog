@@ -5,11 +5,11 @@
             [com.wsscode.pathom3.interface.eql :as p.eql]))
 
 (pco/defresolver package-id->order-id
-  [{:keys [package-id]}]
+  [{:keys [_package-id]}]
   {:order-id "oid"})
 
 (pco/defresolver package-id->info
-  [{:keys [package-id]}]
+  [{:keys [_package-id]}]
   ;; 一个 input, 对应一个 output, 但是 output 有多个字段
   {::pco/output [:create-time
                  :status
@@ -21,7 +21,7 @@
    :weight "1kg"})
 
 (pco/defresolver package-id->package-details
-  [{:keys [package-id]}]
+  [{:keys [_package-id]}]
   ;; output 的 shape 和返回值是完全一样的
   {::pco/output [{:package-details [:sku :num :price]}]}
   {:package-details [{:sku-code "sku1"
@@ -32,7 +32,7 @@
                       :price 15}]})
 
 (pco/defresolver sku-code->sku
-  [{:keys [:sku-code]}]
+  [{:keys [_sku-code]}]
   {::pco/output [:sku-id
                  :primary-image
                  :cost]}
@@ -58,6 +58,7 @@
 
 (sm :package-total-price)
 
+#_{:clj-kondo/ignore [:unresolved-var]}
 (p.eql/process env
                ;; 已知信息
                {:package-id 1}
