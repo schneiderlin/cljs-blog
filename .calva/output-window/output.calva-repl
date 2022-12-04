@@ -8,8 +8,6 @@
 ; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
 ; Jacking in...
 ; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
 ; Hooking up nREPL sessions...
 ; Connected session: clj
 ; TIPS:
@@ -29,6 +27,4 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
-1
-1
-clj꞉cljs.user꞉> 
+; nREPL Connection was closed

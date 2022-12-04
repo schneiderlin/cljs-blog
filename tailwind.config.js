@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./resources/public/index.html",
     "./resources/public/js/compiled/app.js",
+    "./resources/public/js/compiled/cljs-runtime/*.js",
   ],
   theme: {
     extend: {
