@@ -12,14 +12,14 @@
     </noscript>
     <div id="app"></div>
     <script src="js/compiled/app.js"></script>
-    <iframe id="kraken" style="display: none;" src="./kraken/kraken.html" width="3000" height="3000"></iframe>
+    <iframe id="xiangqi" style="display: block;" src="./xiangqi/xiangqi.html" width="1024" height="800"></iframe>
     <script type="text/javascript">
         const channel = new MessageChannel()
         console.log("message channel created")
         window.port2 = channel.port2
 
-        const frameElem = document.getElementById("kraken")
-        const frame = document.getElementById("kraken").contentWindow
+        const frameElem = document.getElementById("xiangqi")
+        const frame = frameElem.contentWindow
         frame.addEventListener("load", function () {
             frame.postMessage( // this is like a physical meeting
                 "", // some useless message
@@ -29,6 +29,7 @@
             console.log("port2 send to iframe")
         })
 
+        window.port1 = channel.port1
         channel.port1.onmessage = e => {
             console.log("port1 get message: ", e)
             const payload = JSON.parse(e.data)
