@@ -4,3 +4,25 @@ cljs꞉cljs-blog.events꞉> 
 cljs꞉cljs-blog.events꞉> 
 nil
 cljs꞉cljs-blog.events꞉> 
+nil
+cljs꞉cljs-blog.channel꞉> 
+#'cljs-blog.channel/socket
+cljs꞉cljs-blog.channel꞉> 
+nil
+cljs꞉cljs-blog.channel꞉> 
+#'cljs-blog.channel/channel
+cljs꞉cljs-blog.channel꞉> 
+#object[Push [object Object]]
+cljs꞉cljs-blog.channel꞉> 
+4
+cljs꞉cljs-blog.channel꞉> 
+#object[Push [object Object]]
+cljs꞉cljs-blog.channel꞉> 
+#object[Push [object Object]]
+cljs꞉cljs-blog.channel꞉> 
+#object[Push [object Object]]
+cljs꞉cljs-blog.channel꞉> 
+nil
+cljs꞉cljs-blog.events꞉> 
+nil
+cljs꞉cljs-blog.events꞉> 

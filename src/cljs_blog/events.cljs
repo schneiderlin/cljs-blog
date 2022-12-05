@@ -2,8 +2,7 @@
   (:require
    [re-frame.core :as rf]
    [cljs-blog.db :as db]
-   [cljs-blog.channel :refer [channel]]
-   ["phoenix" :as phoenix]))
+   [cljs-blog.channel :refer [channel]]))
 
 (rf/reg-event-db
  ::initialize-db
@@ -43,17 +42,17 @@
    (assoc db :select-role role)))
 
 (comment
-  (rf/dispatch [::push-channel {:key :value :key1 "value1"}])
+  (rf/dispatch [::push-channel "test" {:key :value :key1 "value1"}])
   ;; end
   )
 
 (rf/reg-event-fx
  ::push-channel
- (fn [_cofx [_ payload]]
-   {:push-channel payload}))
+ (fn [_cofx [_ event-type payload]]
+   {:push-channel [event-type payload]}))
 
 (rf/reg-fx
  :push-channel
- (fn [payload]
+ (fn [event-type payload]
    (js/console.log payload)
-   (.push channel "new_msg" payload)))
+   (.push channel event-type payload)))
