@@ -11,7 +11,7 @@
 
 (defrecord KeyTree [value key-tree-children])
 
-(defn create-root
+(defn create-node
   "create a key-tree with value"
   [value]
   (map->KeyTree {:value value
@@ -19,7 +19,7 @@
 
 (comment
   ;; create root with value
-  (def root (create-root :root))
+  (def root (create-node :root))
   ;; the top path
   top
   ;; top path together with root create a Location
@@ -35,6 +35,10 @@
   ;; update a new value in root
   (def new-loc1 (change-value #(str % "new-value") loc))
   (get-value new-loc1)
+  
+  ;; add a child to loc
+  (def added-child (add-child :key :value loc))
+  (get-value (go-down :key added-child))
 
   ;; move is just a value level function
   ;; given one node value, return all it children
@@ -121,7 +125,7 @@
    (let [{:keys [tree path]} loc
          {v :value actions :key-tree-children} tree]
      (map->Location
-      {:tree (create-root new-value)
+      {:tree (create-node new-value)
        :path (map->Path {:tag :non-top
                          :v v
                          :k k
@@ -148,6 +152,15 @@
       (assoc key-tree
              :key-tree-children
              (map-vals #(expand-tree-one-step moves %) children)))))
+
+(defn add-child
+  "add a child to current location's children"
+  [key value loc]
+  (let [key-tree (:tree loc)
+        key-tree-children (:key-tree-children key-tree)
+        new-children (assoc key-tree-children key (create-node value))
+        new-tree (assoc key-tree :key-tree-children new-children)]
+    (set-tree new-tree loc)))
 
 (defn expand-one-step 
   "moves: a value level function for how to transition to next level
