@@ -29,3 +29,50 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
 #object[Function]
 cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/send-message
+cljs꞉cljs-blog.core꞉> 
+nil
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:1:1
+;  Wrong number of args (1) passed to cljs-blog.core/send-message
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/send-message
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/send-message
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
+nil
+cljs꞉cljs-blog.core꞉> 
