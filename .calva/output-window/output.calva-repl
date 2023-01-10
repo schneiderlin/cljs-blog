@@ -1,64 +1,13 @@
-; This is the Calva evaluation results output window.
-; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
-;   when connected to a REPL session.
-; Please see https://calva.io/output/ for more info.
-; Happy coding! ♥️
-
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-; Connected session: cljs, repl: :app
-; TIPS: You can choose which REPL to use (clj or cljs):
-;    *Calva: Toggle REPL connection*
-;    (There is a button in the status bar for this)
-; Jack-in done.
-cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
-nil
-; No available JS runtime.
-; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
-cljs꞉cljs.user꞉> 
-nil
-; ------ WARNING - :undeclared-ns ------------------------------------------------
-;  Resource: <eval>:1:2
-;  No such namespace: clerk, could not locate clerk.cljs, clerk.cljc, or JavaScript source providing "clerk"
-; --------------------------------------------------------------------------------
-; 
-; 
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:2
-;  Use of undeclared Var clerk/serve!
-; --------------------------------------------------------------------------------
-; 
-cljs꞉cljs.user꞉> 
-nil
-; ------ REPL Error while processing ---------------------------------------------
-; (ns cljs.user
-;   "Commonly used symbols for easy access in the ClojureScript REPL during
-;   development."
-;   (:require
-;    [cljs.repl :refer (Error->map apropos dir doc error->str ex-str ex-triage
-;                                  find-doc print-doc pst source)]
-;    [clojure.pprint :refer (pprint)]
-;    [clojure.string :as str]
-;    [nextjournal.clerk :as clerk]))
-; The required namespace "nextjournal.clerk" is not available, it was required by "cljs/user.cljs".
-; "nextjournal/clerk.clj" was found on the classpath. Maybe this library only supports CLJ?
-cljs꞉cljs.user꞉> 
+(.parse js/JSON "{}")
+#js {}
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/listen-port1-data
+cljs꞉cljs-blog.core꞉> 
+#object[Function]
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/handler
+cljs꞉cljs-blog.core꞉> 
+#'cljs-blog.core/handler
+cljs꞉cljs-blog.core꞉> 
+#object[Function]
+cljs꞉cljs-blog.core꞉> 

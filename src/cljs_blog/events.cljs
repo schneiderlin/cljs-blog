@@ -5,6 +5,11 @@
    [cljs-blog.channel :refer [channel]]))
 
 (rf/reg-event-db
+ ::move
+ (fn [db _]
+   db))
+
+(rf/reg-event-db
  ::initialize-db
  (fn [_ _]
    db/default-db))
