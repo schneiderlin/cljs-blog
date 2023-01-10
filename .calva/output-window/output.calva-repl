@@ -1,18 +1,50 @@
-new-loc
-#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value :new-root, :key-tree-children {}}, :path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}}
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Jack-in done.
+cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
+nil
 cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/get-value
+cljs-blog.key-tree/Path
 cljs꞉cljs-blog.key-tree꞉> 
-:root
+#'cljs-blog.key-tree/top
 cljs꞉cljs-blog.key-tree꞉> 
-:new-root
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Can't take value of macro cljs.core/defn
+; --------------------------------------------------------------------------------
+; 
 cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/new-loc1
+#'cljs-blog.key-tree/is-path-top?
 cljs꞉cljs-blog.key-tree꞉> 
-":rootnew-value"
+cljs-blog.key-tree/Location
 cljs꞉cljs-blog.key-tree꞉> 
-; Evaluating file: key_tree.cljs
-[]
+cljs-blog.key-tree/KeyTree
+cljs꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/create-node
 cljs꞉cljs-blog.key-tree꞉> 
 #'cljs-blog.key-tree/root
 cljs꞉cljs-blog.key-tree꞉> 
@@ -20,396 +52,297 @@ cljs꞉cljs-blog.key-tree꞉> 
 cljs꞉cljs-blog.key-tree꞉> 
 #'cljs-blog.key-tree/loc
 cljs꞉cljs-blog.key-tree꞉> 
-:root
-cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/new-loc
-cljs꞉cljs-blog.key-tree꞉> 
-:new-root
-cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/new-loc1
-cljs꞉cljs-blog.key-tree꞉> 
-":rootnew-value"
-cljs꞉cljs-blog.key-tree꞉> 
 nil
-; ------ REPL Error while processing ---------------------------------------------
-; (defn moves (fn [root-value]
-;                 [:child1 :child2]))
-; Syntax error macroexpanding cljs.core/defn.
-; Call to cljs.core/defn did not conform to spec.
-; -- Spec failed --------------------
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+;  Use of undeclared Var cljs-blog.key-tree/get-value
+; --------------------------------------------------------------------------------
 ; 
-;   (... (fn [root-value] [:child1 :child2]))
-;        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-; 
-; should satisfy
-; 
-;   vector?
-; 
-; or value
-; 
-;   (... (fn ... ...))
-;         ^^
-; 
-; should satisfy
-; 
-;   vector?
-; 
-; -- Relevant specs -------
-; 
-; :shadow.cljs.devtools.cljs-specs/param-list:
-;   (clojure.spec.alpha/and
-;    clojure.core/vector?
-;    (clojure.spec.alpha/cat
-;     :params
-;     (clojure.spec.alpha/* :shadow.cljs.devtools.cljs-specs/binding-form)
-;     :var-params
-;     (clojure.spec.alpha/?
-;      (clojure.spec.alpha/cat
-;       :ampersand
-;       #{'&}
-;       :var-form
-;       :shadow.cljs.devtools.cljs-specs/binding-form))))
-; :shadow.cljs.devtools.cljs-specs/params+body:
-;   (clojure.spec.alpha/cat
-;    :params
-;    :shadow.cljs.devtools.cljs-specs/param-list
-;    :body
-;    (clojure.spec.alpha/alt
-;     :prepost+body
-;     (clojure.spec.alpha/cat
-;      :prepost
-;      clojure.core/map?
-;      :body
-;      (clojure.spec.alpha/+ clojure.core/any?))
-;     :body
-;     (clojure.spec.alpha/* clojure.core/any?)))
-; :shadow.cljs.devtools.cljs-specs/defn-args:
-;   (clojure.spec.alpha/cat
-;    :fn-name
-;    clojure.core/simple-symbol?
-;    :docstring
-;    (clojure.spec.alpha/? clojure.core/string?)
-;    :meta
-;    (clojure.spec.alpha/? clojure.core/map?)
-;    :fn-tail
-;    (clojure.spec.alpha/alt
-;     :arity-1
-;     :shadow.cljs.devtools.cljs-specs/params+body
-;     :arity-n
-;     (clojure.spec.alpha/cat
-;      :bodies
-;      (clojure.spec.alpha/+
-;       (clojure.spec.alpha/spec
-;        :shadow.cljs.devtools.cljs-specs/params+body))
-;      :attr-map
-;      (clojure.spec.alpha/? clojure.core/map?))))
-; 
-; -------------------------
-; Detected 1 error
-; 
-cljs꞉cljs-blog.key-tree꞉> 1
-1
-cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ REPL Error while processing ---------------------------------------------
-; (defn moves (fn [root-value]
-;                 [:child1 :child2]))
-; Syntax error macroexpanding cljs.core/defn.
-; Call to cljs.core/defn did not conform to spec.
-; -- Spec failed --------------------
-; 
-;   (... (fn [root-value] [:child1 :child2]))
-;        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-; 
-; should satisfy
-; 
-;   vector?
-; 
-; or value
-; 
-;   (... (fn ... ...))
-;         ^^
-; 
-; should satisfy
-; 
-;   vector?
-; 
-; -- Relevant specs -------
-; 
-; :shadow.cljs.devtools.cljs-specs/param-list:
-;   (clojure.spec.alpha/and
-;    clojure.core/vector?
-;    (clojure.spec.alpha/cat
-;     :params
-;     (clojure.spec.alpha/* :shadow.cljs.devtools.cljs-specs/binding-form)
-;     :var-params
-;     (clojure.spec.alpha/?
-;      (clojure.spec.alpha/cat
-;       :ampersand
-;       #{'&}
-;       :var-form
-;       :shadow.cljs.devtools.cljs-specs/binding-form))))
-; :shadow.cljs.devtools.cljs-specs/params+body:
-;   (clojure.spec.alpha/cat
-;    :params
-;    :shadow.cljs.devtools.cljs-specs/param-list
-;    :body
-;    (clojure.spec.alpha/alt
-;     :prepost+body
-;     (clojure.spec.alpha/cat
-;      :prepost
-;      clojure.core/map?
-;      :body
-;      (clojure.spec.alpha/+ clojure.core/any?))
-;     :body
-;     (clojure.spec.alpha/* clojure.core/any?)))
-; :shadow.cljs.devtools.cljs-specs/defn-args:
-;   (clojure.spec.alpha/cat
-;    :fn-name
-;    clojure.core/simple-symbol?
-;    :docstring
-;    (clojure.spec.alpha/? clojure.core/string?)
-;    :meta
-;    (clojure.spec.alpha/? clojure.core/map?)
-;    :fn-tail
-;    (clojure.spec.alpha/alt
-;     :arity-1
-;     :shadow.cljs.devtools.cljs-specs/params+body
-;     :arity-n
-;     (clojure.spec.alpha/cat
-;      :bodies
-;      (clojure.spec.alpha/+
-;       (clojure.spec.alpha/spec
-;        :shadow.cljs.devtools.cljs-specs/params+body))
-;      :attr-map
-;      (clojure.spec.alpha/? clojure.core/map?))))
-; 
-; -------------------------
-; Detected 1 error
-; 
-cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ REPL Error while processing ---------------------------------------------
-; (defn moves (fn [root-value]
-;                 [:child1 :child2]))
-; Syntax error macroexpanding cljs.core/defn.
-; Call to cljs.core/defn did not conform to spec.
-; -- Spec failed --------------------
-; 
-;   (... (fn [root-value] [:child1 :child2]))
-;        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-; 
-; should satisfy
-; 
-;   vector?
-; 
-; or value
-; 
-;   (... (fn ... ...))
-;         ^^
-; 
-; should satisfy
-; 
-;   vector?
-; 
-; -- Relevant specs -------
-; 
-; :shadow.cljs.devtools.cljs-specs/param-list:
-;   (clojure.spec.alpha/and
-;    clojure.core/vector?
-;    (clojure.spec.alpha/cat
-;     :params
-;     (clojure.spec.alpha/* :shadow.cljs.devtools.cljs-specs/binding-form)
-;     :var-params
-;     (clojure.spec.alpha/?
-;      (clojure.spec.alpha/cat
-;       :ampersand
-;       #{'&}
-;       :var-form
-;       :shadow.cljs.devtools.cljs-specs/binding-form))))
-; :shadow.cljs.devtools.cljs-specs/params+body:
-;   (clojure.spec.alpha/cat
-;    :params
-;    :shadow.cljs.devtools.cljs-specs/param-list
-;    :body
-;    (clojure.spec.alpha/alt
-;     :prepost+body
-;     (clojure.spec.alpha/cat
-;      :prepost
-;      clojure.core/map?
-;      :body
-;      (clojure.spec.alpha/+ clojure.core/any?))
-;     :body
-;     (clojure.spec.alpha/* clojure.core/any?)))
-; :shadow.cljs.devtools.cljs-specs/defn-args:
-;   (clojure.spec.alpha/cat
-;    :fn-name
-;    clojure.core/simple-symbol?
-;    :docstring
-;    (clojure.spec.alpha/? clojure.core/string?)
-;    :meta
-;    (clojure.spec.alpha/? clojure.core/map?)
-;    :fn-tail
-;    (clojure.spec.alpha/alt
-;     :arity-1
-;     :shadow.cljs.devtools.cljs-specs/params+body
-;     :arity-n
-;     (clojure.spec.alpha/cat
-;      :bodies
-;      (clojure.spec.alpha/+
-;       (clojure.spec.alpha/spec
-;        :shadow.cljs.devtools.cljs-specs/params+body))
-;      :attr-map
-;      (clojure.spec.alpha/? clojure.core/map?))))
-; 
-; -------------------------
-; Detected 1 error
-; 
-cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/moves
-cljs꞉cljs-blog.key-tree꞉> 
-[:child1 :child2]
-cljs꞉cljs-blog.key-tree꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-; nth not supported on this type cljs.core/Keyword
-cljs꞉cljs-blog.key-tree꞉> (def key-tree root)
-#'cljs-blog.key-tree/key-tree
-cljs꞉cljs-blog.key-tree꞉> 
-{}
-cljs꞉cljs-blog.key-tree꞉> 
-:root
-cljs꞉cljs-blog.key-tree꞉> (empty? {})
-true
-cljs꞉cljs-blog.key-tree꞉> (def value :root)
-#'cljs-blog.key-tree/value
-cljs꞉cljs-blog.key-tree꞉> 
-#object[cljs_blog$key_tree$moves]
-cljs꞉cljs-blog.key-tree꞉> 
-[:child1 :child2]
-cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/moves
-cljs꞉cljs-blog.key-tree꞉> 
-{:key1 :child1, :key2 :child2}
-cljs꞉cljs-blog.key-tree꞉> 
-#cljs-blog.key-tree.KeyTree{:value :root, :key-tree-children {:key1 #cljs-blog.key-tree.KeyTree{:value :child1, :key-tree-children {}}, :key2 #cljs-blog.key-tree.KeyTree{:value :child2, :key-tree-children {}}}}
 cljs꞉cljs-blog.key-tree꞉> 
 nil
 ; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:19
-;  Use of undeclared Var cljs-blog.key-tree/expand-tree-one-step
+;  Resource: <eval>:1:2
+;  Use of undeclared Var cljs-blog.key-tree/get-value
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/root
+cljs꞉cljs-blog.key-tree꞉> 
+#cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}
+cljs꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/loc
+cljs꞉cljs-blog.key-tree꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+;  Use of undeclared Var cljs-blog.key-tree/get-value
 ; --------------------------------------------------------------------------------
 ; 
 cljs꞉cljs-blog.key-tree꞉> 
 ; Evaluating file: key_tree.cljs
 ; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:142:19
-;  Use of undeclared Var cljs-blog.key-tree/expand-tree-one-step
+;  Resource: <eval>:40:6
+;  Use of undeclared Var cljs-blog.key-tree/change
 ; --------------------------------------------------------------------------------
 ; 
 nil
 cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/expand-one-step
+#'cljs-blog.key-tree/root
+cljs꞉cljs-blog.key-tree꞉> 
+#cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}
+cljs꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/loc
 cljs꞉cljs-blog.key-tree꞉> 
 :repl/exception!
 ; 
 ; Execution error (TypeError) at (<cljs repl>:1).
 ; Cannot read properties of undefined (reading 'call')
 cljs꞉cljs-blog.key-tree꞉> 
-; Evaluating file: key_tree.cljs
-[]
+loc
+#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value :root, :key-tree-children {}}, :path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}}
 cljs꞉cljs-blog.key-tree꞉> 
-#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value :root, :key-tree-children {:key1 #cljs-blog.key-tree.KeyTree{:value :child1, :key-tree-children {}}, :key2 #cljs-blog.key-tree.KeyTree{:value :child2, :key-tree-children {}}}}, :path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}}
+(get-value loc)
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+cljs꞉cljs-blog.key-tree꞉> loc
+#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value :root, :key-tree-children {}}, :path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}}
 cljs꞉cljs-blog.key-tree꞉> 
+(def tree (:tree location))
 nil
 ; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:2
-;  Use of undeclared Var cljs-blog.key-tree/level-2-loc
+;  Resource: <eval>:1:18
+;  Use of undeclared Var cljs-blog.key-tree/location
 ; --------------------------------------------------------------------------------
 ; 
 cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:12
-;  Use of undeclared Var cljs-blog.key-tree/level-2-loc
-; --------------------------------------------------------------------------------
-; 
+(def location loc)
+#'cljs-blog.key-tree/location
 cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:2
-;  Use of undeclared Var cljs-blog.key-tree/level-2-loc
-; --------------------------------------------------------------------------------
-; 
+(def tree (:tree location))
+#'cljs-blog.key-tree/tree
 cljs꞉cljs-blog.key-tree꞉> 
-; Evaluating file: key_tree.cljs
-[]
+tree
+#cljs-blog.key-tree.KeyTree{:value :root, :key-tree-children {}}
 cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:2
-;  Use of undeclared Var cljs-blog.key-tree/level-2-loc
-; --------------------------------------------------------------------------------
-; 
+(def value (:value tree))
+#'cljs-blog.key-tree/value
 cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/level-2-loc
-cljs꞉cljs-blog.key-tree꞉> 
+value
 :root
 cljs꞉cljs-blog.key-tree꞉> 
-#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value :child1, :key-tree-children {}}, :path #cljs-blog.key-tree.Path{:tag :non-top, :v :root, :k :key1, :parent-path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}, :siblings {:key2 #cljs-blog.key-tree.KeyTree{:value :child2, :key-tree-children {}}}}}
+loc
+#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value :root, :key-tree-children {}}, :path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}}
 cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/child1-loc
-cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/child2-loc
-cljs꞉cljs-blog.key-tree꞉> 
-:child1
-cljs꞉cljs-blog.key-tree꞉> 
-:child2
-cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:8:24
-;  Use of undeclared Var cljs-blog.key-tree/location
-; --------------------------------------------------------------------------------
+(get-value root)
+:repl/exception!
 ; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
 cljs꞉cljs-blog.key-tree꞉> 
+; Jacking in...
+; nREPL Connection was closed
+; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Jack-in done.
+cljs꞉cljs.user꞉> 
 ; Evaluating file: key_tree.cljs
 ; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:159:24
-;  Use of undeclared Var cljs-blog.key-tree/location
+;  Resource: <eval>:40:6
+;  Use of undeclared Var cljs-blog.key-tree/change
 ; --------------------------------------------------------------------------------
 ; 
 nil
-cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/add-child
-cljs꞉cljs-blog.key-tree꞉> 
-#'cljs-blog.key-tree/added-child
-cljs꞉cljs-blog.key-tree꞉> 
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
 nil
-cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ WARNING - :fn-arity -----------------------------------------------------
-;  Resource: <eval>:1:12
-;  Wrong number of args (1) passed to cljs-blog.key-tree/go-down
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+; Evaluating file: key_tree.cljs
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:40:6
+;  Use of undeclared Var cljs-blog.key-tree/change
 ; --------------------------------------------------------------------------------
 ; 
-cljs꞉cljs-blog.key-tree꞉> 
 nil
-cljs꞉cljs-blog.key-tree꞉> 
-#cljs-blog.key-tree.Location{:tree :value, :path #cljs-blog.key-tree.Path{:tag :non-top, :v :root, :k :key, :parent-path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}, :siblings {}}}
-cljs꞉cljs-blog.key-tree꞉> 
-nil
-; ------ WARNING - :fn-arity -----------------------------------------------------
-;  Resource: <eval>:6:51
-;  Wrong number of args (1) passed to cljs.core/create-node
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+; Evaluating file: key_tree.cljs
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:40:6
+;  Use of undeclared Var cljs-blog.key-tree/change
 ; --------------------------------------------------------------------------------
 ; 
-cljs꞉cljs-blog.key-tree꞉> 
+nil
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/create-node
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> create-node
+#object[cljs_blog$key_tree$create_node]
+clj꞉cljs-blog.key-tree꞉> 
+(create-node :a)
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; Cannot read properties of undefined (reading 'call')
+clj꞉cljs-blog.key-tree꞉> 
+nil
+clj꞉cljs-blog.key-tree꞉> 
+cljs-blog.key-tree/Path
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/top
+clj꞉cljs-blog.key-tree꞉> 
+top
+#cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/is-path-top?
+clj꞉cljs-blog.key-tree꞉> (is-path-top? top)
+true
+clj꞉cljs-blog.key-tree꞉> 
+cljs-blog.key-tree/Location
+clj꞉cljs-blog.key-tree꞉> 
+cljs-blog.key-tree/KeyTree
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/create-node
+clj꞉cljs-blog.key-tree꞉> 
+(create-node :a)
+#cljs-blog.key-tree.KeyTree{:value :a, :key-tree-children {}}
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/set-tree
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/update-tree
+clj꞉cljs-blog.key-tree꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:6:6
+;  Use of undeclared Var cljs-blog.key-tree/change
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.key-tree꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:6:6
+;  Use of undeclared Var cljs-blog.key-tree/change
+; --------------------------------------------------------------------------------
+; 
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/change
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/set-value
+clj꞉cljs-blog.key-tree꞉> 
 ; Evaluating file: key_tree.cljs
 []
-cljs꞉cljs-blog.key-tree꞉> 
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/root
+clj꞉cljs-blog.key-tree꞉> 
+#cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/loc
+clj꞉cljs-blog.key-tree꞉> 
+:root
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/new-loc
+clj꞉cljs-blog.key-tree꞉> 
+:new-root
+clj꞉cljs-blog.key-tree꞉> 
+new-loc
+#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value :new-root, :key-tree-children {}}, :path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}}
+clj꞉cljs-blog.key-tree꞉> 
+:new-root
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/change-value
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/new-loc1
+clj꞉cljs-blog.key-tree꞉> new-loc1
+#cljs-blog.key-tree.Location{:tree #cljs-blog.key-tree.KeyTree{:value ":rootnew-value", :key-tree-children {}}, :path #cljs-blog.key-tree.Path{:tag :top, :v nil, :k nil, :parent-path nil, :siblings nil}}
+clj꞉cljs-blog.key-tree꞉> 
+":rootnew-value"
+clj꞉cljs-blog.key-tree꞉> 
 #'cljs-blog.key-tree/added-child
-cljs꞉cljs-blog.key-tree꞉> 
+clj꞉cljs-blog.key-tree꞉> 
 :value
-cljs꞉cljs-blog.key-tree꞉> 
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/moves
+clj꞉cljs-blog.key-tree꞉> 
+{:key1 :child1, :key2 :child2}
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/level-2-loc
+clj꞉cljs-blog.key-tree꞉> 
+:root
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/child1-loc
+clj꞉cljs-blog.key-tree꞉> 
+#'cljs-blog.key-tree/child2-loc
+clj꞉cljs-blog.key-tree꞉> 
+:child1
+clj꞉cljs-blog.key-tree꞉> 
+:child2
+clj꞉cljs-blog.key-tree꞉> 

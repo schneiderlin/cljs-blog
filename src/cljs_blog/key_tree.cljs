@@ -17,48 +17,6 @@
   (map->KeyTree {:value value
                  :key-tree-children {}}))
 
-(comment
-  ;; create root with value
-  (def root (create-node :root))
-  ;; the top path
-  top
-  ;; top path together with root create a Location
-  (def loc (map->Location {:tree root :path top}))
-  ;; get value from root
-  (get-value loc)
-
-  ;; set a new value in root node
-  (def new-loc (set-value :new-root loc))
-  ;; get value in new-loc
-  (get-value new-loc)
-
-  ;; update a new value in root
-  (def new-loc1 (change-value #(str % "new-value") loc))
-  (get-value new-loc1)
-  
-  ;; add a child to loc
-  (def added-child (add-child :key :value loc))
-  (get-value (go-down :key added-child))
-
-  ;; move is just a value level function
-  ;; given one node value, return all it children
-  (defn moves [root-value]
-    {:key1 :child1
-     :key2 :child2})
-  (moves :root)
-
-  ;; lift to tree-level
-  (def level-2-loc (expand-one-step moves loc))
-  (get-value level-2-loc)
-  ;; tree can go down
-  (def child1-loc (go-down :key1 level-2-loc))
-  (def child2-loc (go-down :key2 level-2-loc))
-  (get-value child1-loc)
-  (get-value child2-loc)
-
-  ;; end
-  )
-
 (defn- set-tree
   "set the whole tree in this location
    t: the new tree
@@ -73,6 +31,20 @@
   [f loc]
   (let [tree (:tree loc)]
     (assoc loc :tree (f tree))))
+
+(defn change
+  "change the whole tree in this location"
+  [t loc]
+  (assoc loc :tree t))
+
+(defn change-value
+  "change the tree's current node value in this location"
+  [f old-location]
+  (let [old-tree (:tree old-location)
+        old-value (:value old-tree)
+        new-value (f old-value)
+        new-tree (assoc old-tree :value new-value)]
+    (change new-tree old-location)))
 
 (defn set-value
   [new-value old-location]
@@ -190,3 +162,45 @@
             max-child (go-down max-key location)]
         (println (str "max-key" max-key))
         (descend max-child (not is-max-node) moves)))))
+
+(comment
+  ;; create root with value
+  (def root (create-node :root))
+  ;; the top path
+  top
+  ;; top path together with root create a Location
+  (def loc (map->Location {:tree root :path top}))
+  ;; get value from root
+  (get-value loc)
+
+  ;; set a new value in root node
+  (def new-loc (set-value :new-root loc))
+  ;; get value in new-loc
+  (get-value new-loc)
+
+  ;; update a new value in root
+  (def new-loc1 (change-value #(str % "new-value") loc))
+  (get-value new-loc1)
+
+  ;; add a child to loc
+  (def added-child (add-child :key :value loc))
+  (get-value (go-down :key added-child))
+
+  ;; move is just a value level function
+  ;; given one node value, return all it children
+  (defn moves [root-value]
+    {:key1 :child1
+     :key2 :child2})
+  (moves :root)
+
+  ;; lift to tree-level
+  (def level-2-loc (expand-one-step moves loc))
+  (get-value level-2-loc)
+  ;; tree can go down
+  (def child1-loc (go-down :key1 level-2-loc))
+  (def child2-loc (go-down :key2 level-2-loc))
+  (get-value child1-loc)
+  (get-value child2-loc)
+
+  ;; end
+  )
